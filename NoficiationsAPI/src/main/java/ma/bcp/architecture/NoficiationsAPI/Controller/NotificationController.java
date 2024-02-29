@@ -6,6 +6,7 @@ import ma.bcp.architecture.NoficiationsAPI.Service.FCMService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,7 +19,8 @@ public class NotificationController {
     @Autowired
     private FCMService fcmService;
 
-    @PostMapping("/notification")
+    @CrossOrigin(origins = "http://localhost:3001")
+    @PostMapping(value = "/notification", consumes = {"application/json", "text/plain"})
     public ResponseEntity sendNotification(@RequestBody NotificationRequest request) throws ExecutionException, InterruptedException{
         fcmService.sendMessageToToken(request);
         return new ResponseEntity<>(new NotificationResponse(HttpStatus.OK.value(), "Notification has been sent."), HttpStatus.OK);
