@@ -60,6 +60,9 @@ export default function SideNav() {
         <ListItem button component={Link} to="/dialog">
           <ListItemText primary="Dialog" />
         </ListItem>
+        <ListItem button component={Link} to="/notification">
+          <ListItemText primary="Notification" />
+        </ListItem>
         <ListItem button component={Link} to="/svelte">
           <ListItemText primary="Svelte Page" />
         </ListItem>

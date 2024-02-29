@@ -2,6 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import DialogPage from './pages/dialog-page';
 import IndexPage from './pages/index-page';
+import NotificationPage from './pages/notification-page';
 import React from 'react';
 import RoutingPage from './pages/routing-page';
 import SveltePage from './pages/svelte-page';
@@ -13,6 +14,7 @@ const Routes = () => (
       <IndexPage />
     </Route>
     <Route path="/dialog" component={DialogPage} />
+    <Route path="/notification" component={NotificationPage} />
     <Route path="/ui-library" component={UiLibraryPage} />
     <Route path="/routing" component={RoutingPage} />
     <Route path="/svelte" component={SveltePage} />
