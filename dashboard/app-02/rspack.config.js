@@ -50,6 +50,7 @@ module.exports = {
       },
       exposes: {
         './Dialog': './src/Dialog',
+        './Notification': './src/Notification',
         './Tabs': './src/Tabs',
       },
       shared: {

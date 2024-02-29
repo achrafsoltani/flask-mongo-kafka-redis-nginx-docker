@@ -3,13 +3,13 @@ import Markdown from 'markdown-to-jsx';
 import Page from '../Page';
 import React from 'react';
 
-const Dialog = React.lazy(() => import('app_02/Dialog'));
+const Notification = React.lazy(() => import('app_02/Notification'));
 
 const NotificationPage = () => (
   <Page title="Notification Demo (FCM)">
     <Markdown>{NotificationMarkdown}</Markdown>
     <React.Suspense fallback="Loading Dialog...">
-      <Dialog />
+      <Notification />
     </React.Suspense>
   </Page>
 );
