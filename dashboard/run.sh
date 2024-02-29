@@ -8,3 +8,4 @@ cd app-04 && yarn install
 cd ..
 cd app-05 && yarn install
 cd ..
+pnpm run start
